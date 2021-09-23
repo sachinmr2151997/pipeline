@@ -1,5 +1,5 @@
 pipeline{
-	agent { label 'master' }
+	agent any
 	stages {
 		stage('BUILD'){
 			steps {
@@ -9,8 +9,7 @@ pipeline{
 		}
 		stage('TEST'){
 			steps {
-			sh 'echo this is my 1st pipeline job'
-			sh 'df -h'		
+			sh 'echo this is my 1st pipeline job'		
 			}
 		}
         }
